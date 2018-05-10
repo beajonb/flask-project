@@ -14,11 +14,6 @@ app.secret_key = 'bjon'
 api = Api(app)
 
 
-@app.before_first_request
-def create_db():
-    db.create_all()
-
-
 jwt = JWT(app, authenticate, identity)
 
 
